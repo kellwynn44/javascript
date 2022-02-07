@@ -1,0 +1,87 @@
+/*********************************************************************
+***
+*Original Author: Michelle Petit                                  *
+*Date Created:  10-08-2020                                        *
+*Version: 1                                                       *
+*Date Last Modified: 10-08-2020                                   *
+*Modified by: Michelle Petit                                      *
+*Modification log: changed foundation default styles               *
+***
+******************************************************************** */
+/* general body styles */
+body {
+  background-color: black;
+  color: whitesmoke;
+  font-weight: 500;
+}
+/* header styles */
+div#realEstateMenu {
+  background-color: black;
+  color: red;
+}
+div.top-bar-left li {
+  background-color: black;
+}
+div.top-bar-left li a {
+  color: whitesmoke;
+}
+div.top-bar-left li a:hover {
+  color: red;
+}
+a.button {
+  background-color: lightgray;
+  color: black;
+  margin-right: 0;
+}
+a.button:hover {
+  background-color: red;
+}
+header#banner {
+  background-image: url("images/graveyard.jpg");
+  background-size: contain;
+}
+header h1 {
+  font-weight: 700;
+  color: red;
+  line-height: 7rem;
+}
+p#search_box {
+  line-height: 1.3rem;
+}
+/* main content styles */
+div.show-for-large {
+  background-color: whitesmoke;
+}
+button#search_now,
+button#book {
+  background-color: red;
+}
+p.lead {
+  color: red;
+}
+div.img_box {
+  min-height: 28rem;
+  max-height: 60rem;
+  background-color: #e5e5e4;
+}
+/* footer styles */
+div#footer {
+  background-color: black;
+}
+div.small-6 {
+  background-color: black;
+  color: whitesmoke;
+  text-align: center;
+}
+div.small-6 a {
+  color: whitesmoke;
+}
+div.small-6 a:hover {
+  color: red;
+}
+div#footer p {
+  color: red;
+}
+div#copyright p {
+  color: red;
+}

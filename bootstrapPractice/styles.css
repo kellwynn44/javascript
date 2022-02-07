@@ -1,0 +1,28 @@
+/*********************************************************************
+***
+*Original Author: Michelle Petit                                  *
+*Date Created:  10-06-2020                                        *
+*Version: 1                                                       *
+*Date Last Modified: 10-06-2020                                   *
+*Modified by: Michelle Petit                                      *
+*Modification log: changed bootstrap default styles               *
+***
+******************************************************************** */
+/* top image styles */
+div.jumbotron {
+  background-image: url("images/header_img.jpg");
+  background-size: contain;
+}
+div.jumbotron h1,
+p {
+  color: white;
+}
+/* main section styles */
+div.col-sm-3 p {
+  color: black;
+}
+/* footer styles */
+footer {
+  background-color: black !important;
+  color: white;
+}
