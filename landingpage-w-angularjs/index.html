@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice Using AngularJS</title>
+    <link
+      rel="stylesheet"
+      href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <div
+      class="title-bar"
+      data-responsive-toggle="realEstateMenu"
+      data-hide-for="small"
+    >
+      <button class="menu-icon" type="button" data-toggle></button>
+      <div class="title-bar-title">Menu</div>
+    </div>
+
+    <div class="top-bar" id="realEstateMenu">
+      <div class="top-bar-left">
+        <ul class="menu" data-responsive-menu="accordion">
+          <li class="menu-text">Recently Deceased Travel Agency</li>
+          <li><a href="#index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Destinations</a></li>
+          <li><a href="#">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li><a class="button">Login</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- /Navigation -->
+    <!-- header banner -->
+    <header id="banner">
+      <p>&nbsp;</p>
+        <h1 class="text-center">Destinations for the Recently Deceased</h1>
+      <p>&nbsp;</p>
+    </header>
+    <br />
+
+    <div class="row">
+      <div class="medium-7 large-6 columns">
+        <h1>When You Aren't Ready To Leave Just Yet</h1>
+        <p class="subheader">
+         We know that life can leave you wanting more. That's where we come in. Let us
+          help you have one last adventure before you move on to the afterlife!
+        </p>  
+        <div class="img-fluid img_box small_box">
+          <img
+            src="images/danger.png"
+            alt="danger sign"
+            id="danger_img"
+          />
+        </div>
+      </div>
+      
+      <!--Destination List Box-->
+      <div ng-app="landingPageApp" class="medium-5 large-6 columns">
+        <div class="callout secondary">
+            <div class="row">
+              <div class="small-12 columns content">
+                
+                  <div ng-controller='LandingPageController'>
+                      <p>{{message}}</p> 
+                      <button ng-click="order = 'type'">
+                        Order By Tour Types 
+                      </button>
+                      <button ng-click="order = 'location'">
+                        Order By Locations
+                      </button>  
+                      <input type="text" ng-model="search" placeholder="Search for a destination"/>
+                        <ul>
+                          <li ng-repeat="destination in destinations | orderBy: order | filter: search">
+                            <h3>{{destination.type}}</h3>
+                            <span>{{destination.location}}</span>
+                            <div class="remove" ng-click='removeDestination()'>x<div>
+                          </li>
+                        </ul>
+                    </div>
+                </div>          
+              </div>
+          </div>
+      </div> 
+
+    <div class="row column">
+      <hr />
+    </div>
+
+    <div class="row column">
+      <p class="lead">Danger, Secrets, and Hauntings For Souls Who Are Seeking A New Thrill Now That Their Lives Are Over!</p>
+    </div>
+
+    <div class="row small-up-1 medium-up-2 large-up-3">
+      <div class="column">
+        <div class="callout img_box medium_box">
+          <p>
+            <img
+              src="images/shipwreck.jpg"
+              alt="an underwater shipwreck"
+            />
+          </p>
+          <p class="lead text-center">Shipwreck Tours</p>
+          <p class="subheader text-center">
+            Now that you're not breathing anymore,<br> you can enjoy amazing underwater adventures!
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="callout img_box medium_box">
+          <p>
+            <img
+              src="images/volcanoes.jpg"
+              alt="volcanoes erupting"
+            />
+          </p>
+          <p class="lead text-center">Fire and Brimstone Tours</p>
+          <p class="subheader text-center">
+          Explore dangerous locations that would have killed you when you were alive!
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="callout img_box medium_box">
+          <p>
+            <img
+              src="images/pyramids.jpg"
+              alt="the great pyramids"
+            />
+          </p>
+          <p class="lead text-center">Enigma Tours</p>
+          <p class="subheader text-center">
+           Take advantage of the fact that time is meaningless when you're dead by travelling
+            through time and space to solve some of civilization's greatest mysteries!
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="callout img_box medium_box">
+          <p>
+            <img
+              src="images/haunted_house.jpg"
+              alt="an image of a spooky old mansion"
+            />
+          </p>
+          <p class="lead text-center">Haunting Tours</p>
+          <p class="subheader text-center">
+            Did you love watching horror movies when you were alive? Now you can be the villan 
+            in a real life horror show by scaring the living daylights out of people at historically
+            "haunted" locations!
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="callout img_box medium_box">
+          <p>
+            <img
+              src="images/caves.jpg"
+              alt="image of a large cavern"
+            />
+          </p>
+          <p class="lead text-center">Secret Places Tours</p>
+          <p class="subheader text-center">
+            Explore locations that were hidden from you during life.
+          </p>
+        </div>
+      </div>
+      <div class="column text-center">
+        <div class="callout text-center img_box medium_box">
+          <p>
+            <img
+              src="images/cyclone.jpg"
+              alt="a tornado touching down"
+            />
+          </p>
+          <p class="lead">Natural Disasters Tours</p>
+          <p class="subheader">
+            For souls who wanted to be storm chasers during life, or wondered what
+            it would be like to experience a natural disaster.
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <footer>
+      <div class="row" id="footer">
+        <div class="small-6 large-3 columns">
+          <p class="lead">Offices</p>
+          <ul class="menu vertical">
+            <li><a href="#">North</a></li>
+            <li><a href="#">South</a></li>
+            <li><a href="#">East</a></li>
+            <li><a href="#">West</a></li>
+          </ul>
+        </div>
+        <div class="small-6 large-3 columns">
+          <p class="lead">Contact</p>
+          <ul class="menu vertical">
+            <li>
+              <a href="#">Howler</a>
+            </li>
+            <li>
+              <a href="#"></i> Gravebook</a>
+            </li>
+            <li>
+              <a href="#"></i> Deathgram</a>
+            </li>
+            <li>
+              <a href="#"></i> Pinerest</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row column" id="copyright">
+           <p class="text-center">&copy;&nbsp;965-2020 Recently Deceased Travel Agency</p>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,154 @@
+/*********************************************************************
+***
+*Original Author: Michelle Petit                                  *
+*Date Created:  10-08-2020                                        *
+*Version: 1                                                       *
+*Date Last Modified: 10-10-2020                                   *
+*Modified by: Michelle Petit                                      *
+*Modification log: changed foundation default styles, added styles*
+*              from the net ninja's github for AngularJS section  *
+***
+******************************************************************** */
+/* general body styles */
+body {
+  background-color: black;
+  color: whitesmoke;
+  font-weight: 500;
+}
+/* header styles */
+div#realEstateMenu {
+  background-color: black;
+  color: red;
+}
+div.top-bar-left li {
+  background-color: black;
+}
+div.top-bar-left li a {
+  color: whitesmoke;
+}
+div.top-bar-left li a:hover {
+  color: red;
+}
+a.button {
+  background-color: lightgray;
+  color: black;
+  margin-right: 0;
+}
+a.button:hover {
+  background-color: red;
+}
+header#banner {
+  background-image: url("images/graveyard.jpg");
+  background-size: contain;
+}
+header h1 {
+  font-weight: 700;
+  color: red;
+  line-height: 7rem;
+}
+p#search_box {
+  line-height: 1.3rem;
+}
+/* main content styles */
+div.show-for-large {
+  background-color: whitesmoke;
+}
+button#search_now,
+button#book {
+  background-color: red;
+}
+p.lead {
+  color: red;
+}
+div.small_box {
+  max-height: 20rem;
+  background-color: #e5e5e4;
+  text-align: center;
+}
+div.medium_box {
+  min-height: 28rem;
+  max-height: 60rem;
+  background-color: #e5e5e4;
+  text-align: center;
+}
+img#danger_img {
+  max-height: 20rem;
+}
+/* footer styles */
+div#footer {
+  background-color: black;
+}
+div.small-6 {
+  background-color: black;
+  color: whitesmoke;
+  text-align: center;
+}
+div.small-6 a {
+  color: whitesmoke;
+}
+div.small-6 a:hover {
+  color: red;
+}
+div#footer p {
+  color: red;
+}
+div#copyright p {
+  color: red;
+}
+/* angularJS section styles */
+.content {
+  padding-top: 0;
+  color: black;
+  font-weight: 600;
+}
+
+.content button,
+.content input[type="submit"] {
+  background: red;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  border: 0;
+  box-shadow: 2px 2px 2px rgba(20, 20, 20, 0.1);
+  font-size: 1rem;
+}
+.content ul {
+  padding: 0;
+  list-style-type: none;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+.content li {
+  padding: 1rem 0;
+  border-top: 1px solid red;
+  font-size: 1rem;
+  color: black;
+}
+.content li span {
+  float: right;
+  color: black;
+  font-weight: 500;
+}
+.content li h3 {
+  display: inline-block;
+  font-size: 1rem;
+  color: black;
+  font-weight: 500;
+}
+.content input {
+  width: 90%;
+  padding: 10px 5%;
+  margin: 10px 0;
+}
+.remove {
+  float: right;
+  padding: 0;
+  width: 18px;
+  text-align: center;
+  border-radius: 20px;
+  color: crimson;
+  cursor: pointer;
+  margin-left: 10px;
+}
